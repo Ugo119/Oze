@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navMain"
+    app:startDestination="@id/welcomeFragment">
+
+    <action
+        android:id="@+id/actionWelcome"
+        app:destination="@+id/welcomeFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/slide_out"
+        app:popEnterAnim="@anim/fade_in"
+        app:popExitAnim="@anim/slide_out"
+        />
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.ugo.datplace.presentation.auth.welcome.WelcomeFragment"
+        android:label="WelcomeFragment"
+        tools:layout="@layout/fragment_welcome"/>
+
+    <action
+        android:id="@+id/actionLogin"
+        app:destination="@+id/loginFragment"
+        app:enterAnim="@anim/slide_in"
+        app:exitAnim="@anim/slide_out"
+        app:popEnterAnim="@anim/slide_in"
+        app:popExitAnim="@anim/slide_out"
+        />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.ugo.datplace.presentation.auth.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login"/>
+
+    <action
+        android:id="@+id/actionCreateAccount"
+        app:destination="@+id/createAccountFragment"
+        app:enterAnim="@anim/slide_in"
+        app:exitAnim="@anim/slide_out"
+        app:popEnterAnim="@anim/slide_in"
+        app:popExitAnim="@anim/slide_out"
+        />
+
+    <fragment
+        android:id="@+id/createAccountFragment"
+        android:name="com.ugo.datplace.presentation.auth.register.CreateAccountFragment"
+        android:label="CreateNewFragment"
+        tools:layout="@layout/fragment_create_account"/>
+
+    <action
+        android:id="@+id/actionPlaces"
+        app:destination="@+id/placesFragment"
+        app:enterAnim="@anim/slide_in"
+        app:exitAnim="@anim/slide_out"
+        app:popEnterAnim="@anim/slide_in"
+        app:popExitAnim="@anim/slide_out"
+        />
+
+    <fragment
+        android:id="@+id/placesFragment"
+        android:name="com.ugo.datplace.presentation.places.PlacesFragment"
+        android:label="PlacesFragment"
+        tools:layout="@layout/fragment_places"/>
+</navigation>

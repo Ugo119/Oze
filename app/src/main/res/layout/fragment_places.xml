@@ -1,0 +1,51 @@
+<layout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <!-- region Binding -->
+
+  <data>
+
+    <variable
+      name="disposables"
+      type="io.reactivex.disposables.CompositeDisposable" />
+
+    <variable
+      name="viewModel"
+      type="com.ugo.datplace.presentation.places.PlacesViewModel" />
+
+  </data>
+
+  <!-- endregion -->
+
+  <!-- region Root -->
+
+  <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- region Toolbar -->
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_search"
+        />
+
+    <!-- endregion -->
+
+    <TextView
+        style="@style/Ugo.TextAppearance.Text.B1.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:lineSpacingExtra="@dimen/size_p4"
+        android:text="@string/explore_the_world"
+        android:textAlignment="center" />
+
+    <!-- endregion -->
+
+  </FrameLayout>
+
+  <!-- endregion -->
+
+</layout>

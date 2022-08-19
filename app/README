@@ -1,0 +1,29 @@
+Welcome to the Edukoya project.
+Edukoya will be an e-learning platform aimed at students in Africa. The MVP (Question Bank Product)
+will allow students to access past exam papers and thus better prepare for exams.
+Edukoya approached Netguru asking to assist with developing the Question Bank product.
+JIRA
+SLACK CHANNEL
+Figma
+1Password: Edukoya - Project
+Services
+Bitrise
+Installation
+Write down step-by-step instructions what you need to do after fulfilling the prerequisites to launch
+the application.
+Clone project from GIT
+Download secret.properties file from 1Password Vault and place it in the project root folder
+Download google-services.json and place it in application-student and application-tutor folders
+Download release.jks and place it in settings/keystore directory
+Sync project with Gradle
+Linter and Code Style
+When committing to the repository, please, format your code according to the team code style guide. By default, it should be consistent with formatter from IDE.
+Style guide for Kotlin
+Android linter
+Project guide
+Build types and flavors
+Build types
+Flavors
+Follow this guide for using secrets.
+Danger
+Follow this guide to use Danger in your setup In short - adjust your /Dangerfile and add required data to your Bitrise PR workflow

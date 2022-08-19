@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <eat-comment />
+
+  <style name="Ugo.TextAppearance" parent="" />
+
+  <!-- region Font Text -->
+
+  <style name="Ugo.TextAppearance.Font.Text.Regular" parent="@android:style/TextAppearance">
+    <item name="android:fontFamily">sans-serif</item>
+    <item name="fontFamily">sans-serif</item>
+  </style>
+
+  <style name="Ugo.TextAppearance.Font.Text.Medium" parent="@android:style/TextAppearance">
+    <item name="android:fontFamily">sans-serif-medium</item>
+    <item name="fontFamily">sans-serif-medium</item>
+
+  </style>
+
+  <style name="Ugo.TextAppearance.Font.Text.Logo.Medium" parent="@android:style/TextAppearance">
+    <item name="android:fontFamily">@font/potta_one</item>
+    <item name="fontFamily">@font/potta_one</item>
+
+  </style>
+  
+  <!-- endregion -->
+
+
+  <!-- region Text -->
+
+  <style name="Ugo.TextAppearance.Text.H1" parent="Ugo.TextAppearance.Font.Text.Regular">
+    <item name="android:textSize">@dimen/font_32</item>
+  </style>
+
+  <style name="Ugo.TextAppearance.Text.Logo.H1" parent="Ugo.TextAppearance.Font.Text.Logo.Medium">
+    <item name="android:textSize">@dimen/font_40</item>
+  </style>
+
+  <style name="Ugo.TextAppearance.Text.H1.Medium" parent="Ugo.TextAppearance.Font.Text.Medium">
+    <item name="android:textSize">@dimen/font_32</item>
+  </style>
+
+  <style name="Ugo.TextAppearance.Text.H2" parent="Ugo.TextAppearance.Font.Text.Regular">
+    <item name="android:textSize">@dimen/font_28</item>
+  </style>
+
+  <style name="Ugo.TextAppearance.Text.H2.Medium" parent="Ugo.TextAppearance.Font.Text.Medium">
+    <item name="android:textSize">@dimen/font_28</item>
+  </style>
+
+  <style name="Ugo.TextAppearance.Text.H3" parent="Ugo.TextAppearance.Font.Text.Regular">
+    <item name="android:textSize">@dimen/font_24</item>
+  </style>
+
+  <style name="Ugo.TextAppearance.Text.H3.Medium" parent="Ugo.TextAppearance.Font.Text.Medium">
+    <item name="android:textSize">@dimen/font_24</item>
+  </style>
+
+  <style name="Ugo.TextAppearance.Text.H4" parent="Ugo.TextAppearance.Font.Text.Regular">
+    <item name="android:textSize">@dimen/font_20</item>
+  </style>
+
+  <style name="Ugo.TextAppearance.Text.H4.Medium" parent="Ugo.TextAppearance.Font.Text.Medium">
+    <item name="android:textSize">@dimen/font_20</item>
+  </style>
+
+  <style name="Ugo.TextAppearance.Text.H5" parent="Ugo.TextAppearance.Font.Text.Regular">
+    <item name="android:textSize">@dimen/font_19</item>
+  </style>
+
+  <style name="Ugo.TextAppearance.Text.H5.Medium" parent="Ugo.TextAppearance.Font.Text.Medium">
+    <item name="android:textSize">@dimen/font_18</item>
+  </style>
+
+  <style name="Ugo.TextAppearance.Text.H6" parent="Ugo.TextAppearance.Font.Text.Regular">
+    <item name="android:textSize">@dimen/font_16</item>
+  </style>
+
+  <style name="Ugo.TextAppearance.Text.H6.Medium" parent="Ugo.TextAppearance.Font.Text.Medium">
+    <item name="android:textSize">@dimen/font_16</item>
+  </style>
+
+  <style name="Ugo.TextAppearance.Text.B1" parent="Ugo.TextAppearance.Font.Text.Regular">
+    <item name="android:textSize">@dimen/font_14</item>
+  </style>
+
+  <style name="Ugo.TextAppearance.Text.B1.Medium" parent="Ugo.TextAppearance.Font.Text.Medium">
+    <item name="android:textSize">@dimen/font_14</item>
+  </style>
+
+  <style name="Ugo.TextAppearance.Text.B2" parent="Ugo.TextAppearance.Font.Text.Regular">
+    <item name="android:textSize">@dimen/font_12</item>
+  </style>
+
+  <style name="Ugo.TextAppearance.Text.B2.Medium" parent="Ugo.TextAppearance.Font.Text.Medium">
+    <item name="android:textSize">@dimen/font_12</item>
+  </style>
+
+  <style name="Ugo.TextAppearance.Text.C1" parent="Ugo.TextAppearance.Font.Text.Regular">
+    <item name="android:textSize">@dimen/font_12</item>
+    <item name="android:letterSpacing">0.08</item>
+  </style>
+
+  <style name="Ugo.TextAppearance.Text.C1.Medium" parent="Ugo.TextAppearance.Font.Text.Medium">
+    <item name="android:textSize">@dimen/font_12</item>
+    <item name="android:letterSpacing">0.08</item>
+  </style>
+
+  <style name="Ugo.TextAppearance.Text.C2" parent="Ugo.TextAppearance.Font.Text.Regular">
+    <item name="android:textSize">@dimen/font_10</item>
+  </style>
+
+  <style name="Ugo.TextAppearance.Text.C2.Medium" parent="Ugo.TextAppearance.Font.Text.Medium">
+    <item name="android:textSize">@dimen/font_10</item>
+  </style>
+
+  <!-- endregion -->
+
+
+</resources>

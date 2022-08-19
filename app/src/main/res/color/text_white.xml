@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- region Enabled -->
+
+    <item android:color="@color/white" android:state_enabled="true" />
+
+    <!-- endregion -->
+
+    <!-- region Normal -->
+
+    <item android:color="@color/gray30" android:state_enabled="false" />
+
+    <!-- endregion -->
+
+</selector>

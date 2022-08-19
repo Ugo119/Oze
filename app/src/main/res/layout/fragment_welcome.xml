@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <!-- region Binding -->
+
+    <data>
+
+        <variable
+            name="disposables"
+            type="io.reactivex.disposables.CompositeDisposable"
+            />
+
+        <variable
+            name="viewModel"
+            type="com.ugo.datplace.presentation.auth.welcome.WelcomeViewModel"
+            />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightseablue"
+        tools:context=".presentation.auth.welcome.WelcomeFragment"
+        >
+
+        <TextView
+            android:id="@+id/datPlaceText"
+            style="@style/Ugo.TextAppearance.Text.Logo.H1"
+            android:layout_width="@dimen/size_auto"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_p22"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/size_p22"
+            android:layout_marginBottom="@dimen/size_p4"
+            android:fontFamily="@font/potta_one"
+            android:text="@string/dat_place"
+            android:textAlignment="center"
+            android:textColor="@color/primaryCobalt"
+            app:layout_constraintBottom_toTopOf="@id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.074" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/size_p216"
+            android:layout_height="@dimen/size_p216"
+            android:layout_marginTop="@dimen/size_p8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/datPlaceText"
+            app:layout_constraintBottom_toTopOf="@id/header"
+            app:srcCompat="@drawable/ic_welcome_screen"
+            />
+
+        <TextView
+            android:id="@+id/header"
+            style="@style/Ugo.TextAppearance.Text.H3.Medium"
+            android:layout_width="@dimen/size_auto"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginStart="@dimen/size_p22"
+            android:layout_marginEnd="@dimen/size_p22"
+            android:layout_marginTop="@dimen/size_p4"
+            android:layout_marginBottom="@dimen/size_p4"
+            android:text="@string/welcome_header"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/imageView"
+            app:layout_constraintBottom_toTopOf="@+id/buttonContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size_p16"
+            app:layout_constraintTop_toBottomOf="@id/header"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            >
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_login"
+                style="@style/Ugo.Widget.Button.Primary.White"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:text="@string/log_in"
+                android:textColor="@color/primaryBlue"
+                android:textAllCaps="false"
+                app:disposables="@{disposables}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/demacator"
+                app:throttledClicks="@{() -> viewModel.onLoginClicked()}"
+                />
+
+            <LinearLayout
+                android:id="@+id/demacator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/size_p10"
+                app:layout_constraintTop_toBottomOf="@id/btn_login"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:gravity="center_horizontal">
+
+                <View
+                    android:layout_width="150dp"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="@dimen/size_p20"
+                    android:background="@android:color/black"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <TextView
+                    style="@style/Ugo.TextAppearance.Text.B1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_marginEnd="@dimen/size_p20"
+                    android:text="@string/or"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/imageView"
+                    app:layout_constraintBottom_toTopOf="@+id/buttonContainer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+                <View
+                    android:layout_width="150dp"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_create_account"
+                style="@style/Ugo.Widget.Button.Primary"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="@string/welcome_start"
+                android:textAllCaps="false"
+                app:disposables="@{disposables}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/demacator"
+                app:throttledClicks="@{() -> viewModel.onCreateAccountClicked()}"
+                />
+
+            <LinearLayout
+                android:id="@+id/layout_divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_p20"
+                android:orientation="horizontal"
+                android:weightSum="5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/btn_create_account"
+                >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/divider_1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:background="@color/gray04"
+                    />
+
+                <TextView
+                    style="@style/Ugo.TextAppearance.Text.C1.Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/or"
+                    android:textColor="@color/white"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/divider_1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:background="@color/gray04"
+                    />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
