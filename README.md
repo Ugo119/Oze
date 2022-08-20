@@ -38,3 +38,5 @@ Network call
 Flows from the Api interfaces in the network module through the network managers to the 
 domain managers and then to the viewmodels.
 
+All image resources are SVG files in order to minimize app size.
+
