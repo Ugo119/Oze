@@ -15,7 +15,7 @@
 
         <variable
             name="viewModel"
-            type="com.ugo.datplace.presentation.auth.welcome.WelcomeViewModel"
+            type="com.ugo.oze.presentation.auth.welcome.WelcomeViewModel"
             />
 
     </data>
@@ -37,7 +37,7 @@
             android:layout_marginEnd="@dimen/size_p22"
             android:layout_marginBottom="@dimen/size_p4"
             android:fontFamily="@font/potta_one"
-            android:text="@string/dat_place"
+            android:text="@string/oze"
             android:textAlignment="center"
             android:textColor="@color/primaryCobalt"
             app:layout_constraintBottom_toTopOf="@id/imageView"
@@ -68,7 +68,7 @@
             android:layout_marginEnd="@dimen/size_p22"
             android:layout_marginTop="@dimen/size_p4"
             android:layout_marginBottom="@dimen/size_p4"
-            android:text="@string/welcome_header"
+            android:text="@string/oze_welcome_header"
             android:textColor="@color/black"
             app:layout_constraintTop_toBottomOf="@id/imageView"
             app:layout_constraintBottom_toTopOf="@+id/buttonContainer"

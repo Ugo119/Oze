@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <!-- region Root -->
+
+    <LinearLayout
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_p80"
+        android:focusable="true"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:clipToPadding="false"
+        android:layout_marginStart="@dimen/size_p8"
+        android:layout_marginBottom="@dimen/size_p4"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/paymentStatusBg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/avater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/size_p14"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/Ugo.TextAppearance.Text.B1"
+                android:id="@+id/githubUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                tools:text="githubUser"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <!-- endregion -->
+
+</layout>

@@ -39,6 +39,10 @@ dependencies {
         coroutinesVersion = '1.6.0'
         roomVersion = '2.4.0-alpha03'
         fragmentVersion = "1.2.5"
+        okHttpVersion = '4.8.0'
+        gsonVersion = '2.8.6'
+        retrofitVersion = '2.7.2'
+        glideVersion = '4.12.0'
     }
 
     implementation 'androidx.core:core-ktx:1.8.0'
@@ -62,7 +66,32 @@ dependencies {
 
     // endregion
 
+    // region Network
+
+    implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+
+    // endregion
+
+    // region Limbo
+
+    implementation "co.windly:limbo-mvvm:3.0.2"
+    implementation "co.windly:limbo-mvvm-dagger:3.0.1"
+    implementation "co.windly:limbo-recyclerview:2.4.0"
+    implementation "co.windly:limbo-utility:3.0.6"
+
+    // endregion
+
+    // region Glide
+
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+
+    // endregion
+
 //    implementation project(path: ':domain')
 //    implementation project(path: ':persistence')
-//    implementation project(path: ':utility')
+    implementation project(path: ':utility')
 }

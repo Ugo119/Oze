@@ -1,6 +1,7 @@
 <layout
   xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto">
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
 
   <!-- region Binding -->
 
@@ -12,7 +13,7 @@
 
     <variable
       name="viewModel"
-      type="com.ugo.datplace.presentation.places.PlacesViewModel" />
+      type="com.ugo.oze.presentation.places.PlacesViewModel" />
 
   </data>
 
@@ -38,9 +39,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:visibility="gone"
         android:lineSpacingExtra="@dimen/size_p4"
         android:text="@string/explore_the_world"
         android:textAlignment="center" />
+
+    <!-- endregion -->
+
+    <!-- region Github List -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_users"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_p68"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="10"
+        tools:listitem="@layout/item_github_user"
+        />
 
     <!-- endregion -->
 

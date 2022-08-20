@@ -7,7 +7,8 @@
     <string name="log_in">Login</string>
     <string name="welcome_start">Sign Up</string>
     <string name="welcome_header">All About Your Experiences</string>
-    <string name="dat_place">dat Place</string>
+    <string name="oze_welcome_header">All About Your Finances</string>
+    <string name="oze">OZE</string>
     <string name="submit">Submit</string>
     <string name="create_account_login_button">Log in</string>
     <string name="create_account_login_text">Have an account?</string>

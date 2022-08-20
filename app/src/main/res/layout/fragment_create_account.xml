@@ -20,7 +20,7 @@
 
         <variable
             name="viewModel"
-            type="com.ugo.datplace.presentation.auth.register.CreateAccountViewModel"
+            type="com.ugo.oze.presentation.auth.register.CreateAccountViewModel"
             />
 
         <import type="android.view.View" />

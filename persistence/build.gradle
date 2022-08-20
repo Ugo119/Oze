@@ -39,6 +39,8 @@ dependencies {
         coroutinesVersion = '1.6.0'
         roomVersion = '2.4.0-alpha03'
         fragmentVersion = "1.2.5"
+        retrofitVersion = '2.7.2'
+        gsonVersion = '2.8.6'
     }
 
     implementation 'androidx.core:core-ktx:1.8.0'
@@ -54,15 +56,47 @@ dependencies {
     implementation "com.google.dagger:dagger-android-support:$daggerVersion"
     implementation "javax.inject:javax.inject:1"
     implementation "com.google.dagger:dagger:$daggerVersion"
-//    annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
-//    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
 
     kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"
 
+    compileOnly "javax.inject:javax.inject:1"
+
     // endregion
+
+    // region Room
+
+    implementation "androidx.room:room-runtime:$roomVersion"
+    implementation "androidx.room:room-ktx:$roomVersion"
+    annotationProcessor "androidx.room:room-compiler:$roomVersion"
+    implementation "androidx.room:room-rxjava2:$roomVersion"
+    implementation "androidx.room:room-testing:$roomVersion"
+
+    kapt "androidx.room:room-compiler:$roomVersion"
+    kapt "co.windly:ktx-prefs-compiler:1.5.0"
+
+    // endregion
+
+    // region Misc
+
+    implementation "co.windly:ktx-prefs:1.5.0"
+    implementation "co.windly:ktx-prefs-compiler:1.5.0"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+
+    // endregion
+
+    // region Limbo
+
+    implementation "co.windly:limbo-mvvm:3.0.2"
+    implementation "co.windly:limbo-mvvm-dagger:3.0.1"
+    implementation "co.windly:limbo-recyclerview:2.4.0"
+    implementation "co.windly:limbo-utility:3.0.6"
+
+    // endregion
+
+    implementation "com.google.code.gson:gson:$gsonVersion"
 
 //    implementation project(path: ':domain')
 //    implementation project(path: ':network')
-//    implementation project(path: ':utility')
+    implementation project(path: ':utility')
 }
