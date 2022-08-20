@@ -20,7 +20,15 @@ interface PracticeDrawerTrait : FragmentNavigationTrait {
     fun navigateToUserDetails(user: User) {
         navigationTrait
             .findNavController()
-            .navigate(NavMainDirections.actionUserDetails(user.id))
+            .navigate(NavMainDirections
+                .actionUserDetails(
+                    user.id,
+                    user.avatar_url,
+                    user.login,
+                    user.followers_url,
+                    user.gists_url
+                )
+            )
     }
 
 }

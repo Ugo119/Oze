@@ -21,6 +21,7 @@ class PlacesViewModel @Inject constructor(
     private var meta: Meta = Meta()
 
     fun loadNextPage() {
+        Log.e("TAG_Download_Meta", "loadNex Called!")
 
         // Do nothing if all data downloaded.
         if (!meta.isNextAvailable) {
@@ -28,7 +29,7 @@ class PlacesViewModel @Inject constructor(
         }
 
         // Calculate next page.
-        val next = meta.nextIdentifier
+        var next = meta.nextIdentifier
 
         // Download next page of data.
         fetchGithubUsers(page = next)
@@ -37,6 +38,7 @@ class PlacesViewModel @Inject constructor(
     //endregion
 
     // region DownloadUsers Meta
+    var totalCount: Long = 0
 
     fun fetchGithubUsers(page: Long = FIRST_PAGE) {
         userDomainManager
