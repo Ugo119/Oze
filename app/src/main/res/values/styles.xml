@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <eat-comment />
+
+    <!-- region Application -->
+
+    <style name="Ugo" />
+
+    <!-- endregion -->
+
+    <!-- region Bottom Navigation View -->
+
+    <style name="Ugo.Widget.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="itemIconTint">@color/icon_primary</item>
+        <item name="itemTextColor">@color/text_primary</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="itemRippleColor">@color/gray30</item>
+        <item name="itemTextAppearanceInactive">@style/Ugo.TextAppearance.Text.B2.Medium</item>
+        <item name="itemTextAppearanceActive">@style/Ugo.TextAppearance.Text.B2.Medium</item>
+    </style>
+
+    <style name="Ugo.Widget.BottomNavigationView.Dark" parent="Ugo.Widget.BottomNavigationView">
+        <item name="itemIconTint">@color/icon_primary_dark</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!-- region Chips -->
+
+    <style name="Ugo.Widget.Chip" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/background_light_cobalt</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:layout_marginStart">@dimen/size_p2</item>
+        <item name="android:layout_marginEnd">@dimen/size_p2</item>
+    </style>
+
+    <style name="Ugo.Widget.GenderChip" parent="@style/Ugo.Widget.Chip">
+        <item name="chipBackgroundColor">@color/gender_chip_background</item>
+        <item name="android:textColor">@color/gender_chip_text_color</item>
+        <item name="android:layout_marginStart">@dimen/size_p2</item>
+        <item name="android:layout_marginEnd">@dimen/size_p2</item>
+    </style>
+
+    <style name="Ugo.Widget.FeedbackChip" parent="@style/Ugo.Widget.Chip">
+        <item name="chipBackgroundColor">@color/feedback_chip_background</item>
+        <item name="chipStrokeColor">@color/feedback_chip_border_background</item>
+        <item name="android:textColor">@color/feedback_chip_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="checkedIconTint">@color/primaryCobalt</item>
+        <item name="chipCornerRadius">@dimen/size_p8</item>
+        <item name="chipMinHeight">@dimen/size_p48</item>
+        <item name="chipStrokeWidth">@dimen/size_p1</item>
+        <item name="chipStartPadding">@dimen/size_p100</item>
+        <item name="checkedIconVisible">true</item>
+        <item name="android:textAppearance">@style/Ugo.TextAppearance.Text.B1.Medium</item>
+    </style>
+
+    <style name="Ugo.Widget.Chip.AvailabilityChip" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="ensureMinTouchTargetSize">false</item>
+        <item name="textStartPadding">@dimen/size_p16</item>
+        <item name="textEndPadding">@dimen/size_p16</item>
+        <item name="android:textAppearance">@style/Ugo.TextAppearance.Text.B2</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!-- region Navigation Drawer -->
+
+    <style name="Ugo.Widget.NavigationDrawer">
+        <item name="android:listPreferredItemHeightSmall">64dp</item>
+        <item name="listPreferredItemHeightSmall">64dp</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!-- region Material Calendar -->
+
+    <style name="Ugo.Widget.MaterialCalendar" parent="@style/ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="colorPrimary">@color/primaryCobalt</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+    <!-- end region-->
+
+    <!-- region Button -->
+
+    <style name="Ugo.Widget.Button" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">@dimen/size_p8</item>
+        <item name="elevation">0dp</item>
+        <item name="android:insetBottom">@dimen/size_none</item>
+        <item name="android:insetTop">@dimen/size_none</item>
+        <item name="android:lineSpacingExtra">@dimen/font_2</item>
+        <item name="android:minHeight">@dimen/size_p48</item>
+        <item name="android:stateListAnimator">@animator/btn_unelevated</item>
+        <item name="android:textSize">@dimen/font_14</item>
+    </style>
+
+    <style name="Ugo.Widget.Button.Borderless" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:paddingTop">@dimen/size_none</item>
+        <item name="android:paddingBottom">@dimen/size_none</item>
+        <item name="android:minHeight">@dimen/size_none</item>
+        <item name="android:minWidth">@dimen/size_none</item>
+        <item name="android:textAppearance">@style/Ugo.TextAppearance.Text.B2.Medium</item>
+        <item name="android:textColor">@color/primaryCobalt</item>
+        <item name="rippleColor">@color/gray70</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!-- region Button - Primary -->
+
+    <style name="Ugo.Widget.Button.Primary">
+        <item name="android:textColor">@color/text_white</item>
+        <item name="backgroundTint">@color/background_cobalt</item>
+        <item name="rippleColor">@color/whiteAlpha20</item>
+        <item name="android:layout_height">@dimen/size_p56</item>
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="android:textAppearance">@style/Ugo.TextAppearance.Text.H6.Medium</item>
+    </style>
+
+    <style name="Ugo.Widget.Button.Primary.White">
+        <item name="android:textColor">@color/text_white</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="rippleColor">@color/whiteAlpha20</item>
+        <item name="android:layout_height">@dimen/size_p56</item>
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="android:textAppearance">@style/Ugo.TextAppearance.Text.H6.Medium</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!-- region Button - Secondary -->
+
+    <style name="Ugo.Widget.Button.Secondary">
+        <item name="android:textColor">@color/darkGreen</item>
+        <item name="backgroundTint">@color/lightGreen</item>
+        <item name="rippleColor">@color/whiteAlpha20</item>
+        <item name="android:layout_height">@dimen/size_p56</item>
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="android:textAppearance">@style/Ugo.TextAppearance.Text.H6.Medium</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!-- region Button - Tertiary -->
+
+    <style name="Ugo.Widget.Button.Tertiary">
+        <item name="android:textColor">@color/text_gray</item>
+        <item name="backgroundTint">@color/gray04</item>
+        <item name="rippleColor">@color/whiteAlpha20</item>
+        <item name="android:layout_height">@dimen/size_p56</item>
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="android:textAppearance">@style/Ugo.TextAppearance.Text.H6.Medium</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!-- region Button - Tertiary - Navigation -->
+
+    <style name="Ugo.Widget.Button.Skip" parent="Ugo.Widget.Button.Tertiary">
+        <item name="icon">@drawable/ic_arrow_next</item>
+        <item name="iconGravity">textEnd</item>
+        <item name="iconTint">@color/text_gray</item>
+    </style>
+
+    <style name="Ugo.Widget.Button.Next" parent="Ugo.Widget.Button.Primary">
+        <item name="icon">@drawable/ic_thumb_up_common</item>
+        <item name="backgroundTint">@color/primaryGreen</item>
+        <item name="iconGravity">textStart</item>
+    </style>
+
+    <style name="Ugo.Widget.Button.Back" parent="Ugo.Widget.Button.Tertiary">
+        <item name="icon">@drawable/ic_arrow_back</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconTint">@color/text_gray</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!-- region Button - Gray -->
+
+    <style name="Ugo.Widget.Button.Secondary.Grey">
+        <item name="android:textColor">@color/primaryCobalt</item>
+        <item name="backgroundTint">@color/gray02</item>
+        <item name="rippleColor">@color/whiteAlpha20</item>
+        <item name="android:layout_height">@dimen/size_p56</item>
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="android:textAppearance">@style/Ugo.TextAppearance.Text.H6.Medium</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!-- region Button - Gray - Bordered -->
+
+    <style name="Ugo.Widget.Button.Gray" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/gray90</item>
+        <item name="backgroundTint">@color/gray04</item>
+        <item name="strokeWidth">@dimen/size_p2</item>
+        <item name="strokeColor">@color/white</item>
+        <item name="rippleColor">@color/whiteAlpha20</item>
+        <item name="cornerRadius">@dimen/size_p9</item>
+        <item name="android:layout_height">@dimen/size_p56</item>
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="android:textAppearance">@style/Ugo.TextAppearance.Text.B1.Medium</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!-- region Button - Red -->
+
+    <style name="Ugo.Widget.Button.Red">
+        <item name="android:textColor">@color/darkRed</item>
+        <item name="backgroundTint">@color/lightRed</item>
+        <item name="rippleColor">@color/whiteAlpha40</item>
+        <item name="android:layout_height">@dimen/size_p56</item>
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="android:textAppearance">@style/Ugo.TextAppearance.Text.H6.Medium</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!-- region Button - Text -->
+
+    <style name="Ugo.Widget.Button.Text" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/primaryBlue</item>
+        <item name="rippleColor">@color/whiteAlpha40</item>
+        <item name="android:layout_height">@dimen/size_p56</item>
+        <item name="android:textAppearance">@style/Ugo.TextAppearance.Text.B1.Medium</item>
+    </style>
+
+    <!-- endregion -->
+
+    <style name="Ugo.Widget.Button.Feedback" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="backgroundTint">@color/feedback_chip_background</item>
+        <item name="cornerRadius">@dimen/size_p8</item>
+        <item name="strokeColor">@color/feedback_chip_border_background</item>
+        <item name="android:textColor">@color/feedback_chip_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:checkable">true</item>
+        <item name="iconTint">@color/primaryCobalt</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconSize">@dimen/size_p16</item>
+        <item name="icon">@drawable/ic_check_selector</item>
+        <item name="android:padding">@dimen/size_p16</item>
+        <item name="android:textAppearance">@style/Ugo.TextAppearance.Text.B1.Medium</item>
+    </style>
+
+    <!-- region Button - Question -->
+
+    <style name="Ugo.Widget.Button.Question">
+        <item name="android:textColor">@color/primaryCobalt</item>
+        <item name="backgroundTint">@color/lightCobalt</item>
+        <item name="rippleColor">@color/whiteAlpha20</item>
+        <item name="android:layout_height">@dimen/size_p56</item>
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="icon">@drawable/ic_chevron_down</item>
+        <item name="iconGravity">end</item>
+        <item name="iconTint">@color/primaryCobalt</item>
+        <item name="android:textAppearance">@style/Ugo.TextAppearance.Text.B1.Medium</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!-- region Button - End  -->
+
+    <style name="Ugo.Widget.Button.End">
+        <item name="android:textColor">@color/black</item>
+        <item name="backgroundTint">@color/lightGreen</item>
+        <item name="rippleColor">@color/whiteAlpha20</item>
+        <item name="android:layout_height">@dimen/size_p56</item>
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="android:textAppearance">@style/Ugo.TextAppearance.Text.B1.Medium</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!-- region Widget -->
+
+    <style name="Ugo.Widget" />
+
+    <style name="CustomTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/primaryCobalt</item>
+        <item name="hintTextColor">@color/primaryCobalt</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!-- region Number -->
+
+    <style name="Ugo.Widget.TextInputLayout.Number" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/stroke_cobalt</item>
+        <item name="boxStrokeWidthFocused">@dimen/size_p2</item>
+        <item name="boxStrokeWidth">@dimen/size_p2</item>
+        <item name="android:layout_marginStart">@dimen/size_p8</item>
+        <item name="android:layout_marginEnd">@dimen/size_p8</item>
+    </style>
+
+    <style name="Ugo.Widget.EditText.Number" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:textAppearance">@style/Ugo.TextAppearance.Text.H1.Medium</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:inputType">number</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:padding">@null</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="lineHeight">@null</item>
+    </style>
+
+    <style name="Ugo.Widget.TextInputLayout.Message" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxStrokeWidth">@dimen/size_none</item>
+        <item name="boxStrokeWidthFocused">@dimen/size_none</item>
+        <item name="boxCornerRadiusTopStart">@dimen/size_p8</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/size_p8</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/size_p8</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/size_p8</item>
+        <item name="boxBackgroundColor">@color/lightBlue</item>
+    </style>
+
+    <!-- endregion -->
+
+    <style name="Ugo.Widget.Menu.IconMenu.Item" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:textSize">@dimen/size_p14</item>
+    </style>
+
+    <!-- region Toolbar -->
+
+    <style name="Ugo.Widget.Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">@color/white</item>
+        <item name="titleTextAppearance">@style/Ugo.TextAppearance.Text.B1.Medium</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!-- region Circle Image View -->
+
+    <style name="Ugo.Widget.CircleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!-- region RoundCorner Image View -->
+
+    <style name="Ugo.Widget.RoundCorner25" parent="Ugo.Widget.CircleImageView">
+        <item name="cornerSize">25%</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!-- region Material Card View Overlays -->
+
+    <style name="Ugo.Widget.MaterialCardView.NoRoundCorners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <!-- region TopRightRoundedOverlay -->
+
+    <style name="Ugo.Widget.MaterialCardView.TopRightRounded" parent="Ugo.Widget.MaterialCardView.NoRoundCorners">
+        <item name="cornerSizeTopRight">10dp</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!-- region TopLeftRoundedOverlay -->
+
+    <style name="Ugo.Widget.MaterialCardView.TopLeftRounded" parent="Ugo.Widget.MaterialCardView.NoRoundCorners">
+        <item name="cornerSizeTopLeft">10dp</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!-- region BottomRightRoundedOverlay -->
+
+    <style name="Ugo.Widget.MaterialCardView.BottomRightRounded" parent="Ugo.Widget.MaterialCardView.NoRoundCorners">
+        <item name="cornerSizeBottomRight">10dp</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!-- region BottomLeftRoundedOverlay -->
+
+    <style name="Ugo.Widget.MaterialCardView.BottomLeftRounded" parent="Ugo.Widget.MaterialCardView.NoRoundCorners">
+        <item name="cornerSizeBottomLeft">10dp</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!-- endregion -->
+
+</resources>

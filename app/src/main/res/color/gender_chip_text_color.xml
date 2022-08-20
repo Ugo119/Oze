@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- region Checked -->
+
+    <item android:color="@color/darkGreen"
+        android:state_checked="true" />
+
+    <!-- endregion -->
+
+    <!-- region Normal -->
+
+    <item android:color="@color/gray70"
+        android:state_checked="false" />
+
+    <!-- endregion -->
+
+</selector>

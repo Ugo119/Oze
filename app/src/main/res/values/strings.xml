@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Oze</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="about_us">About Us</string>
+    <string name="explore_the_world">Hey there!\nYou don\'t have any interesting experiences yet.\nGo explore the world and share!</string>
+    <string name="or">OR</string>
+    <string name="log_in">Login</string>
+    <string name="welcome_start">Sign Up</string>
+    <string name="welcome_header">All About Your Experiences</string>
+    <string name="oze_welcome_header">All About Your Finances</string>
+    <string name="oze">OZE</string>
+    <string name="submit">Submit</string>
+    <string name="create_account_login_button">Log in</string>
+    <string name="create_account_login_text">Have an account?</string>
+    <string name="phone_number_hint">Mobile Number</string>
+    <string name="prefix">Prefix</string>
+    <string name="common_hint_password">Password</string>
+    <string name="enter_your_mobile_number_below_to_get_started">Enter your mobile number below in this format \n\'0812345678\'</string>
+    <string name="invalid_phone_number">Phone number should not include country code</string>
+    <string name="common_todo">TO DO</string>
+    <string name="common_error_try_again_later">Error. Try again later</string>
+
+    <!-- region Local Validation - Common -->
+
+    <string name="local_error_empty_field">This field cannot be empty.</string>
+    <string name="local_error_number_format_error">Phone number format should be 0812345678</string>
+    <string name="local_error_min_length">Minimum length: %d.</string>
+    <string name="api_error_unknown">Unknown error</string>
+    <string name="forgot_my_password">Forgot password</string>
+
+    <!-- endregion -->
+
+    <!-- region Local Validation - Email -->
+
+    <string name="local_error_email_not_available">This email is not available.</string>
+    <string name="local_error_invalid_email">This is not a valid email address.</string>
+
+    <!-- endregion -->
+
+    <!-- region Local Validation - Username -->
+
+    <string name="local_error_username_not_available">This username is not available.</string>
+
+    <!-- endregion -->
+
+    <!-- region Local Validation - Password -->
+
+    <string name="local_error_invalid_password">Password does not meet requirements.</string>
+    <string name="local_error_password_no_upper_case">Password must have at least one Uppercase(Capital Letter)</string>
+
+    <!-- endregion -->
+
+    <!-- region Network Exception -->
+
+    <string name="network_server_unreachable">
+    Server not reachable. Please check your network connection.
+  </string>
+
+    <!-- endregion -->
+
+    <string name="country_code_error">Phone number should not include country code</string>
+</resources>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <eat-comment />
+
+    <color name="ic_launcher_background">#FFFFFF</color>
+
+    <!-- region Primary Colors-->
+
+    <color name="primaryBlue">#112BF4</color>
+    <color name="primaryCobalt">#195EF7</color>
+    <color name="primaryGreen">#00BE7E</color>
+
+    <!-- endregion-->
+
+    <!-- region Primary Colors-->
+
+    <color name="primaryBlueHover">#F5FFFC</color>
+
+    <!-- endregion-->
+
+    <!-- region Secondary Colors-->
+
+    <color name="oceanBlue">#419BDA</color>
+    <color name="purple">#7453EE</color>
+    <color name="pink">#ED6F75</color>
+    <color name="red">#FF4D54</color>
+    <color name="orange">#FF9947</color>
+    <color name="yellow">#F8CC46</color>
+    <color name="green">#00A36C</color>
+
+    <!-- endregion-->
+
+    <!-- region Secondary Colors - Dark -->
+
+    <color name="darkGreen">#028257</color>
+    <color name="darkYellow">#8C7226</color>
+    <color name="darkRed">#D04348</color>
+    <color name="darkOrange">#AF6225</color>
+
+    <!-- endregion-->
+
+    <!-- region Light Colors-->
+
+    <color name="lightBlue">#F6F7FF</color>
+    <color name="lightCobalt">#F6F9FF</color>
+    <color name="lightGreen">#F0FBF8</color>
+    <color name="lightOceanBlue">#F4F9FD</color>
+    <color name="lightPurple">#F9F8FE</color>
+    <color name="lightPink">#FEF7F7</color>
+    <color name="lightRed">#FFF7F7</color>
+    <color name="lightOrange">#FFFAF7</color>
+    <color name="lightYellow">#FFFDF6</color>
+    <color name="lightseablue">#EAF4FC</color>
+
+    <!-- endregion-->
+
+    <!-- region Light Hover Colors-->
+
+    <color name="lightRedHover">#FDEDED</color>
+    <color name="lightOrageHover">#FCF1EA</color>
+    <color name="darkGreenHover">#047851</color>
+
+    <!-- endregion-->
+
+    <!-- region Grayscale -->
+
+    <color name="white">#FFFFFF</color>
+    <color name="gray02">#FAFAFB</color>
+    <color name="gray04">#F5F6F7</color>
+    <color name="gray10">#E7E9EA</color>
+    <color name="gray30">#ABB0BF</color>
+    <color name="gray50">#657288</color>
+    <color name="gray70">#535C69</color>
+    <color name="gray90">#1E2735</color>
+    <color name="gray94">#141D2B</color>
+    <color name="gray100">#050F1E</color>
+    <color name="lightGray">#96A7AF</color>
+
+    <!-- endregion-->
+
+    <!-- region Application -->
+
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!-- endregion -->
+
+    <!-- region subject colors -->
+
+    <color name="accounts_bg">#F9F8FE</color>
+    <color name="accounts_icon_color">#D6CCFA</color>
+    <color name="accounts_text_color">#7453EE</color>
+
+    <color name="agricultural_science_bg">#F5F5FE</color>
+    <color name="agricultural_science_icon_color">#335B57F1</color>
+    <color name="agricultural_science_text_color">#5B57F1</color>
+
+    <color name="arabic_bg">#F4F5FF</color>
+    <color name="arabic_icon_color">#334859F3</color>
+    <color name="arabic_text_color">#4859F3</color>
+
+    <color name="arts_bg">#F3F5FF</color>
+    <color name="arts_icon_color">#C5DCED</color>
+    <color name="arts_text_color">#365BF5</color>
+
+    <color name="biology_bg">#F6F9FF</color>
+    <color name="biology_icon_color">#B8C0FC</color>
+    <color name="biology_text_color">#195EF7</color>
+
+    <color name="chemistry_bg">#F1F6FE</color>
+    <color name="chemistry_icon_color">#BAD2FA</color>
+    <color name="chemistry_text_color">#1767EC</color>
+
+    <color name="christian_religious_knowledge_bg">#F1F7FD</color>
+    <color name="christian_religious_knowledge_icon_color">#B8D8F2</color>
+    <color name="christian_religious_knowledge_text_color">#0D75CB</color>
+
+    <color name="commerce_bg">#F1F9FB</color>
+    <color name="commerce_icon_color">#330D90B9</color>
+    <color name="commerce_text_color">#0D75CB</color>
+
+    <color name="economics_bg">#F0FAFA</color>
+    <color name="economics_icon_color">#B4E4E3</color>
+    <color name="economics_text_color">#03827E</color>
+
+    <color name="english_bg">#F0FBF8</color>
+    <color name="english_icon_color">#B4EADB</color>
+    <color name="english_text_color">#01835E</color>
+
+    <color name="french_bg">#F0FBF8</color>
+    <color name="french_icon_color">#B3ECD9</color>
+    <color name="french_text_color">#028257</color>
+
+    <color name="geography_bg">#F2FBF3</color>
+    <color name="geography_icon_color">#CEEED3</color>
+    <color name="geography_text_color">#358340</color>
+
+    <color name="government_bg">#F7FBF3</color>
+    <color name="government_icon_color">#DEEFCF</color>
+    <color name="government_text_color">#537E2C</color>
+
+    <color name="hausa_bg">#FBFBF2</color>
+    <color name="hausa_icon_color">#33C5CA52</color>
+    <color name="hausa_text_color">#747725</color>
+
+    <color name="history_bg">#FFFBF1</color>
+    <color name="history_icon_color">#FDF0C8</color>
+    <color name="history_text_color">#8D711C</color>
+
+    <color name="Home_Economics_bg">#FFFDF6</color>
+    <color name="Home_Economics_icon_color">#FDF0C8</color>
+    <color name="Home_Economics_text_color">#F8CC46</color>
+
+    <color name="igbo_bg">#FFFAF1</color>
+    <color name="igbo_icon_color">#FEEAC8</color>
+    <color name="igbo_text_color">#9A6C1F</color>
+
+    <color name="islamic_bg">#FFF9F1</color>
+    <color name="islamic_icon_color">#FFE7C8</color>
+    <color name="islamic_text_color">#A16B24</color>
+
+    <color name="literature_bg">#FFFAF7</color>
+    <color name="literature_icon_color">#FFE1C8</color>
+    <color name="literature_text_color">#AF6225</color>
+
+    <color name="mathematics_bg">#FFF6F1</color>
+    <color name="mathematics_icon_color">#FFDCC9</color>
+    <color name="mathematics_text_color">#B15B2C</color>
+
+    <color name="music_bg">#FFF7F5</color>
+    <color name="music_icon_color">#FFD7CA</color>
+    <color name="music_text_color">#C0522F</color>
+
+    <color name="physics_bg">#FFF6F5</color>
+    <color name="physics_icon_color">#FFD2CB</color>
+    <color name="physics_text_color">#C34A38</color>
+
+    <color name="youruba_bg">#FFF7F7</color>
+    <color name="youruba_icon_color">#FFCACC</color>
+    <color name="youruba_text_color">#D04348</color>
+
+    <!-- endregion -->
+
+    <!-- region Social Colors -->
+
+    <color name="facebookBlue">#3B5998</color>
+    <color name="contactSupport">#008258</color>
+    <color name="socialText">#0D23DB</color>
+    <color name="socialBackground">#E3ECFC</color>
+
+    <!-- endregion -->
+
+    <!-- region Tutorial Screen Colors -->
+
+    <color name="firsttutorialscreen">#1cbd80</color>
+    <color name="secondtutorialscreen">#195cf3</color>
+    <color name="thirdtutorialscreen">#7257e6</color>
+    <color name="tutorialscreenone">#F2F0FC</color>
+    <color name="tutorialscreentwo">#E2F5F0</color>
+    <color name="tutorialscreenthree">#FDF7E4</color>
+    <color name="firsttutorialbutton">#028257</color>
+    <color name="secondtutorialbutton">#112BF4</color>
+    <color name="thirdtutorialbutton">#5F40D3</color>
+    <color name="tutorialbuttoncolor">#112BF4</color>
+
+    <color name="tutor_banner_background">#FFFDF6</color>
+
+    <!-- endregion -->
+
+    <!-- region Quiz -->
+
+    <color name="deep_blue">#112CF4</color>
+
+    <!-- endregion -->
+
+    <color name="light_cobalt">#F6F9FF</color>
+    <color name="text_red">#FF575F</color>
+    <color name="royal_blue">#1A5EF7</color>
+    <color name="light_green">#E2F5F0</color>
+    <color name="light_red">#FFF7F7</color>
+    <color name="light_gray_text">#979797</color>
+    <color name="light_gray_text_two">#7F7F7F</color>
+    <color name="deep_purple">#6B4ED7</color>
+    <color name="light_purple">#E5D7F9</color>
+
+    <!-- region Chat Timer -->
+
+    <color name="sea_green">#D0ECE2</color>
+
+    <!-- endregion -->
+
+</resources>
