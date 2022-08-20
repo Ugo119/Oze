@@ -42,6 +42,9 @@ class PlacesFragment : BaseFragment<FragmentPlacesBinding, PlacesViewModel>(), P
     // Init EventHooks
     initializeEventHooks()
 
+    // Setup Toolbar
+    setupToolbar()
+
     viewModel.fetchGithubUsers()
     viewModel.observeUsers()
   }
@@ -115,4 +118,16 @@ class PlacesFragment : BaseFragment<FragmentPlacesBinding, PlacesViewModel>(), P
   }
 
   //endregion
+
+  // region Toolbar
+
+  private fun setupToolbar() {
+    binding.toolbar.txtHeader.text = APP_NAME
+  }
+
+  // endregion
+
+  companion object {
+    const val APP_NAME = "OZE"
+  }
 }

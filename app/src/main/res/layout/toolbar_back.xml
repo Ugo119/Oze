@@ -21,6 +21,23 @@
             android:layout_height="match_parent"
             >
 
+            <ImageView
+                android:id="@+id/arrowBack"
+                app:tint="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintVertical_bias="0.40"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingStart="@dimen/size_p10"
+                android:paddingBottom="@dimen/size_p10"
+                android:paddingTop="@dimen/size_p10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:srcCompat="@drawable/ic_arrow_back"
+                />
+
             <TextView
                 android:id="@+id/txt_header"
                 style="@style/Ugo.TextAppearance.Text.B1.Medium"

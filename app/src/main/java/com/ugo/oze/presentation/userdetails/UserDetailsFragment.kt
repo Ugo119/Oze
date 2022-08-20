@@ -3,12 +3,15 @@ package com.ugo.oze.presentation.userdetails
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
 import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.adapters.ItemAdapter
 import com.ugo.oze.R
 import com.ugo.oze.databinding.FragmentPlacesBinding
 import com.ugo.oze.databinding.FragmentUserDetailsBinding
 import com.ugo.oze.main.base.BaseFragment
+import com.ugo.oze.presentation.places.PlacesFragment
 import com.ugo.oze.presentation.places.adapter.GithubUserItem
 
 class UserDetailsFragment : BaseFragment<FragmentUserDetailsBinding, UserDetailsViewModel>(),
@@ -28,11 +31,23 @@ class UserDetailsFragment : BaseFragment<FragmentUserDetailsBinding, UserDetails
 
   //endregion
 
+  // region args
+
+  val args : UserDetailsFragmentArgs by navArgs()
+
+  // endregion
+
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
     // Init observers.
     initObservers()
+
+    // Inflate Views
+    inflateViews()
+
+    // Setup Toolbar
+    setupToolbar()
 
   }
 
@@ -53,12 +68,28 @@ class UserDetailsFragment : BaseFragment<FragmentUserDetailsBinding, UserDetails
 
   //endregion
 
-//  fun openNavDrawer() {
-//    binding.toolbar.imgUser.setOnClickListener {
-//      binding.toolbar.imgUser.setOnClickListener {
-//        openDrawer()
-//      }
-//    }
-//  }
+  // region Inflate Views
+
+  private fun inflateViews() {
+    Glide.with(requireContext())
+      .load(args.avatar)
+      .into(binding.userImage)
+    binding.userName.text = args.name
+    binding.followers.text = args.followers
+    binding.gist.text = args.gist
+  }
+
+  // endregion
+
+  // region Toolbar
+
+  private fun setupToolbar() {
+    binding.toolbar.txtHeader.text = PlacesFragment.APP_NAME
+    binding.toolbar.arrowBack.setOnClickListener {
+      navigateUp()
+    }
+  }
+
+  // endregion
 
 }

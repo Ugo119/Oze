@@ -17,11 +17,13 @@ interface PracticeDrawerTrait : FragmentNavigationTrait {
         (fragmentTrait.activity as? MainActivity)?.openDrawer()
     }
 
-//    fun navigateToUserDetails(user: User) {
-//        navigationTrait
-//            .findNavController()
-//            .navigate(NavMainDirections.actionUserDetails(user.id))
-//    }
+    override fun navigateUp() {
+
+        // Pop current fragment.
+        navigationTrait
+            .findNavController()
+            .navigateUp()
+    }
 
 }
 

@@ -26,9 +26,6 @@ interface UserMapper : ExtendedMapper<UserDto, UserEntity, User> {
 //    @Mapping(source = "downloaded", target = "downloaded")
 override fun mapDtoToEntity(dto: UserDto): UserEntity
 
-//    @Mapping(source = "downloaded", target = "downloaded")
-//    fun mapDomainToEntity(domain: User, downloaded: Boolean = false): PastPaperEntity
-
     // endregion
 
 
