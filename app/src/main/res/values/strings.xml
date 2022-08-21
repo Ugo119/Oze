@@ -19,6 +19,8 @@
     <string name="invalid_phone_number">Phone number should not include country code</string>
     <string name="common_todo">TO DO</string>
     <string name="common_error_try_again_later">Error. Try again later</string>
+    <string name="profiles">Profiles</string>
+    <string name="favorites">Favorites</string>
 
     <!-- region Local Validation - Common -->
 

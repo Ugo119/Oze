@@ -2,6 +2,7 @@ package com.ugo.oze.presentation.userdetails
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
@@ -86,10 +87,21 @@ class UserDetailsFragment : BaseFragment<FragmentUserDetailsBinding, UserDetails
 
   // region Mark User As Favorite
 
-  fun makeUserFavorite() {
+  private fun makeUserFavorite() {
     binding.favoriteImage.setOnClickListener {
       viewModel.setUserAsFavorite(args.userId, IS_FAVORITE)
+
+      userSetAsFavoriteSuccess()
     }
+  }
+
+  // endregion
+
+  // region User Set As Favorite Success
+
+  private fun userSetAsFavoriteSuccess() {
+    Toast.makeText(requireContext(), "${args.name} successfully set as favorite", Toast.LENGTH_LONG)
+      .show()
   }
 
   // endregion

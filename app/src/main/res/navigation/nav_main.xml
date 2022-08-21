@@ -103,4 +103,19 @@
             />
 
     </fragment>
+
+    <action
+        android:id="@+id/actionFavorites"
+        app:destination="@+id/favoritesFragment"
+        app:enterAnim="@anim/slide_in"
+        app:exitAnim="@anim/slide_out"
+        app:popEnterAnim="@anim/slide_in"
+        app:popExitAnim="@anim/slide_out"
+        />
+
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.ugo.oze.presentation.favorites.FavoritesFragment"
+        android:label="PlacesFragment"
+        tools:layout="@layout/fragment_places"/>
 </navigation>
