@@ -1,4 +1,4 @@
-package com.ugo.oze.domain.model.user
+package com.ugo.oze.domain.model.favorites
 
 import android.os.Parcelable
 import com.ugo.oze.utility.vocabulary.NONE
@@ -7,7 +7,7 @@ import com.ugo.oze.utility.vocabulary.ZERO
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class User(
+data class Favorites(
     var login: String = String.NONE,
     var id: Long = Long.ZERO,
     var node_id: String = String.NONE,
@@ -27,5 +27,4 @@ data class User(
     var type: String = String.NONE,
     var site_admin: Boolean = false,
     var score: Long = Long.ZERO,
-    var is_favorite: Boolean = false,
 ) : Parcelable

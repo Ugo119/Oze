@@ -42,20 +42,10 @@ class UserPersistenceManager  @Inject constructor(
             .observeUsersByType(type)
             .subscribeOnIo()
 
-//    fun getPastPapersById(pastPaperId: Long): Single<UserEntity> =
-//        userDao
-//            .getPastPapersById(pastPaperId)
-//            .subscribeOnIo()
-//
-//    fun checkPastPaperDownloaded(pastPaperId: Long): Single<Boolean> =
-//        userDao
-//            .checkPastPaperDownloaded(pastPaperId)
-//            .subscribeOnIo()
-//
-//    fun setPastPaperDownloaded(pastPaperId: Long, downloaded: Boolean): Completable =
-//        userDao
-//            .setPastPaperDownloaded(pastPaperId, downloaded)
-//            .subscribeOnIo()
+    fun setUserAsFavorite(userId: Long, is_favorite: Boolean): Completable =
+        userDao
+            .setUserAsFavorite(userId, is_favorite)
+            .subscribeOnIo()
 //
 //    fun removeAllCachedUsers(): Completable =
 //        userDao

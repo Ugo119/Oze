@@ -49,6 +49,9 @@ class UserDetailsFragment : BaseFragment<FragmentUserDetailsBinding, UserDetails
     // Setup Toolbar
     setupToolbar()
 
+    // Set User As Favorite
+    makeUserFavorite()
+
   }
 
   //region Binding
@@ -81,6 +84,16 @@ class UserDetailsFragment : BaseFragment<FragmentUserDetailsBinding, UserDetails
 
   // endregion
 
+  // region Mark User As Favorite
+
+  fun makeUserFavorite() {
+    binding.favoriteImage.setOnClickListener {
+      viewModel.setUserAsFavorite(args.userId, IS_FAVORITE)
+    }
+  }
+
+  // endregion
+
   // region Toolbar
 
   private fun setupToolbar() {
@@ -91,5 +104,9 @@ class UserDetailsFragment : BaseFragment<FragmentUserDetailsBinding, UserDetails
   }
 
   // endregion
+
+  companion object {
+    const val IS_FAVORITE = true
+  }
 
 }
