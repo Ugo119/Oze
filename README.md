@@ -1,6 +1,8 @@
 # Oze
 A quick test to fetch users on github
 
+The Full updated project is contained in main branch.
+
 App uses MVVM architecture supported by Single Source of Truth (SSOT).
 We treat persistence layer as a SSOT  which is composed of Shared Preferences and SQLite Database.
 
