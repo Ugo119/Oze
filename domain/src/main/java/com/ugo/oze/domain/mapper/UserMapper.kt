@@ -5,6 +5,7 @@ import com.ugo.oze.domain.model.base.Meta
 import com.ugo.oze.domain.model.user.User
 import com.ugo.oze.network.dto.UserDto
 import com.ugo.oze.network.dto.base.MetaDto
+import com.ugo.oze.network.dto.base.PageDto
 import com.ugo.oze.persistence.database.entity.UserEntity
 import org.mapstruct.*
 
@@ -17,14 +18,15 @@ interface UserMapper : ExtendedMapper<UserDto, UserEntity, User> {
 
     // Meta
 
-    fun mapDtoToDomain(dto: MetaDto): Meta
+    fun mapDtoToDomain(dto: MetaDto): Meta<User>
 
     // endregion
 
-    // region PastPaper
+    fun mapPageDtoToDomain(dto: PageDto<UserDto>): Meta<User>
 
-//    @Mapping(source = "downloaded", target = "downloaded")
-override fun mapDtoToEntity(dto: UserDto): UserEntity
+    // region
+
+    override fun mapDtoToEntity(dto: UserDto): UserEntity
 
     // endregion
 

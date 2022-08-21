@@ -18,18 +18,24 @@ class PlacesViewModel @Inject constructor(
 
     //region Paging
 
-    private var meta: Meta = Meta()
+    private var meta: Meta<User> = Meta()
+
+    var currentPage = 1L
 
     fun loadNextPage() {
-        Log.e("TAG_Download_Meta", "loadNex Called!")
+
+        currentPage += 1
+
+        val isNextAvailable: Boolean =
+        meta.items.size <= meta.total_count
 
         // Do nothing if all data downloaded.
-        if (!meta.isNextAvailable) {
+        if (!isNextAvailable) {
             return
         }
 
         // Calculate next page.
-        var next = meta.nextIdentifier
+        val next: Long = currentPage
 
         // Download next page of data.
         fetchGithubUsers(page = next)
@@ -38,11 +44,10 @@ class PlacesViewModel @Inject constructor(
     //endregion
 
     // region DownloadUsers Meta
-    var totalCount: Long = 0
 
     fun fetchGithubUsers(page: Long = FIRST_PAGE) {
         userDomainManager
-            .downloadGithubUsers(LOCATION, page)
+            .downloadGithubUsers(LOCATION, page, ITEMS_PER_PAGE)
             .doOnSubscribe { updateProgress(true) }
             .doFinally { updateProgress(false) }
             .subscribe(
@@ -51,7 +56,7 @@ class PlacesViewModel @Inject constructor(
             ).addTo(disposables)
     }
 
-    private fun handleDownloadUsersSuccess(meta: Meta) {
+    private fun handleDownloadUsersSuccess(meta: Meta<User>) {
         // Save meta for later use.
         this.meta = meta
 
@@ -108,6 +113,7 @@ class PlacesViewModel @Inject constructor(
         const val FIRST_PAGE = 1L
         const val LOCATION = "lagos"
         const val TYPE = "User"
+        const val ITEMS_PER_PAGE = 15L
     }
 
     //region Loading

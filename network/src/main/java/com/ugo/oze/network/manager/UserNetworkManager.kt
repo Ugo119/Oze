@@ -9,6 +9,6 @@ import javax.inject.Inject
 class UserNetworkManager @Inject constructor(
     private val api: UserApi
 ) {
-    fun getGithubUsers(location: String, page: Long): Single<PageDto<UserDto>> =
-        api.getGithubUsers(location, page)
+    fun getGithubUsers(location: String, page: Long, itemsPerPage: Long): Single<PageDto<UserDto>> =
+        api.getGithubUsers(location, page, itemsPerPage)
 }
