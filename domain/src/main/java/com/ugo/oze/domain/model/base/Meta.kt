@@ -1,27 +1,25 @@
 package com.ugo.oze.domain.model.base
 
 import co.windly.limbo.utility.mapping.LimboPageMetadata
+import co.windly.limbo.utility.primitives.ZERO
+import com.google.gson.annotations.SerializedName
 
-data class Meta(
-//
-//    var itemsPerPage: Int = 0,
-//
-//    var incomplete_results: Boolean = false,
-//
-//    var totalPages: Long = 0,
+data class Meta<T>(
 
-    var total_count: Long = 0,
+    var items: List<T> = mutableListOf(),
 
-    var currentPage: Long = 0
+    //endregion
 
-) : LimboPageMetadata<Long>() {
+    //region Total Count
 
-    override val isNextAvailable: Boolean
-        get() = currentPage != total_count
+    var total_count: Long = Long.ZERO,
 
-    override val nextIdentifier: Long
-        get() = ++currentPage
+    //endregion
 
-//    fun getAbsoluteIndex(arrayIndex : Int) =
-//        (currentPage - 1) * itemsPerPage + arrayIndex
-}
+    // region Next Page
+
+    var nextPage: Long = Long.ZERO
+
+    // endregion
+
+)

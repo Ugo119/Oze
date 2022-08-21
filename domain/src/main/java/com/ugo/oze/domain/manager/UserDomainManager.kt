@@ -19,10 +19,11 @@ class UserDomainManager @Inject constructor(
 
     fun downloadGithubUsers(
         location: String,
-        page: Long
-    ): Single<Meta> =
+        page: Long,
+        itemsPerPage: Long,
+    ): Single<Meta<User>> =
         network
-            .getGithubUsers(location, page)
+            .getGithubUsers(location, page, itemsPerPage)
             .flatMap {
 
                 // Map entities.
@@ -30,7 +31,7 @@ class UserDomainManager @Inject constructor(
                     mapper.mapDtoListToEntityList(it.items)
 
                 val meta =
-                    mapper.mapDtoToDomain(it.meta)
+                    mapper.mapPageDtoToDomain(it)
 
                 // Save and return page metadata.
                 persistence

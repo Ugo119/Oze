@@ -10,6 +10,7 @@ interface UserApi {
     @GET("search/users")
     fun getGithubUsers(
         @Query("q") location: String,
-        @Query("page") page: Long
+        @Query("page") page: Long,
+        @Query("per_page")itemsPerPage: Long
     ): Single<PageDto<UserDto>>
 }

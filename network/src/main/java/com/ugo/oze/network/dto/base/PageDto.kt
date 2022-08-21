@@ -11,11 +11,19 @@ data class PageDto<T: Any>(
 
     //endregion
 
-    //region Meta
+    //region Total Count
 
-    @SerializedName("meta")
-    var meta: MetaDto = MetaDto(),
+    @SerializedName("total_count")
+    var total_count: Long = Long.ZERO,
 
     //endregion
+
+    // region Next Page
+
+    val nextPage: Long = Long.ZERO
+
+    // endregion
+
+
 
 )
