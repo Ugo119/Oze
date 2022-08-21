@@ -71,7 +71,7 @@ class PlacesViewModel @Inject constructor(
 
     // endregion
 
-    //region Observe Papers
+    //region Observe Users
 
     private val _users: MutableLiveData<List<GithubUserItem>> = MutableLiveData(emptyList())
 

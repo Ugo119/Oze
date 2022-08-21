@@ -87,12 +87,10 @@ class FavoritesViewModel @Inject constructor(
     }
 
     private fun handleObserveUsersSuccess(list: List<User>) {
-//        _users.postValue(list.map { GithubUserItem(it) })
         _users.postValue(list
             .filter {
-            it.is_favorite == true
-        }.
-        map { GithubUserItem(it) })
+                it.is_favorite == true
+            }.map { GithubUserItem(it) })
     }
 
     private fun handleObserveUsersError(throwable: Throwable) {

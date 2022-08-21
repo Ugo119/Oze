@@ -53,6 +53,10 @@ class UserDetailsFragment : BaseFragment<FragmentUserDetailsBinding, UserDetails
     // Set User As Favorite
     makeUserFavorite()
 
+    // Remove User From Favorites
+    removeUserFromFavorite()
+
+
   }
 
   //region Binding
@@ -85,7 +89,7 @@ class UserDetailsFragment : BaseFragment<FragmentUserDetailsBinding, UserDetails
 
   // endregion
 
-  // region Mark User As Favorite
+  // region Favorite
 
   private fun makeUserFavorite() {
     binding.favoriteImage.setOnClickListener {
@@ -95,12 +99,33 @@ class UserDetailsFragment : BaseFragment<FragmentUserDetailsBinding, UserDetails
     }
   }
 
+  private fun removeUserFromFavorite() {
+    binding.cancelImage.setOnClickListener {
+      if (args.isFavorite == null || args.isFavorite == false) {
+        return@setOnClickListener
+      } else {
+        viewModel.setUserAsFavorite(args.userId, CANCEL_FAVORITE)
+      }
+
+      removeUserFromFavoriteSuccess()
+    }
+  }
+
   // endregion
 
   // region User Set As Favorite Success
 
   private fun userSetAsFavoriteSuccess() {
     Toast.makeText(requireContext(), "${args.name} successfully set as favorite", Toast.LENGTH_LONG)
+      .show()
+  }
+
+  // endregion
+
+  // region Remove User From Favorite Success
+
+  private fun removeUserFromFavoriteSuccess() {
+    Toast.makeText(requireContext(), "${args.name} successfully removed from favorite", Toast.LENGTH_LONG)
       .show()
   }
 
@@ -119,6 +144,7 @@ class UserDetailsFragment : BaseFragment<FragmentUserDetailsBinding, UserDetails
 
   companion object {
     const val IS_FAVORITE = true
+    const val CANCEL_FAVORITE = false
   }
 
 }

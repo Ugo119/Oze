@@ -24,24 +24,6 @@ abstract class UserDao : BaseDao<UserEntity>(){
     @Query(value = " SELECT * FROM user WHERE type = :type")
     abstract fun observeUsersByType(type: String): Flowable<List<UserEntity>>
 
-//    @Query(
-//        value = """ SELECT * FROM user WHERE subject_id = :subjectId
-//                 and topics != '[]' ORDER BY year LIMIT :limit"""
-//    )
-//    abstract fun getRandomPastPapersBySubject(
-//        subjectId: Long,
-//        limit: Int = 2
-//    ): Single<List<UserEntity>>
-//
-//    @Query(value = " SELECT * FROM user WHERE id = :pastPaperId")
-//    abstract fun getPastPapersById(pastPaperId: Long): Single<UserEntity>
-//
-//    @Query(value = " SELECT downloaded FROM user WHERE id = :pastPaperId")
-//    abstract fun checkPastPaperDownloaded(pastPaperId: Long): Single<Boolean>
-//
     @Query(value = "UPDATE user SET is_favorite = :is_favorite WHERE id = :userId")
     abstract fun setUserAsFavorite(userId: Long, is_favorite: Boolean): Completable
-//
-//    @Query(value = "UPDATE user SET topics = '[]' WHERE downloaded = 0")
-//    abstract fun removeAllCachedPastPapers(): Completable
 }

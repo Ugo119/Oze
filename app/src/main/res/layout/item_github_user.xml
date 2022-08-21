@@ -27,8 +27,8 @@
 
             <ImageView
                 android:id="@+id/avater"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/size_p72"
+                android:layout_height="@dimen/size_p72"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -36,26 +36,15 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:orientation="vertical"
-            android:layout_marginStart="@dimen/size_p14"
-            android:gravity="center_vertical">
-
-            <TextView
-                style="@style/Ugo.TextAppearance.Text.B1"
-                android:id="@+id/githubUser"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                tools:text="githubUser"
-                />
-
-        </LinearLayout>
-
-
+        <TextView
+            style="@style/Ugo.TextAppearance.Text.B1"
+            android:id="@+id/githubUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            tools:text="githubUser"
+            android:layout_marginStart="@dimen/size_p6"
+            />
 
     </LinearLayout>
 
