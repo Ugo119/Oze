@@ -6,6 +6,7 @@ import com.ugo.oze.presentation.PresentationModule
 import com.ugo.oze.presentation.auth.login.LoginModule
 import com.ugo.oze.presentation.auth.register.CreateNewAccountModule
 import com.ugo.oze.presentation.auth.welcome.WelcomeModule
+import com.ugo.oze.presentation.favorites.FavoritesModule
 import com.ugo.oze.presentation.places.PlacesModule
 import com.ugo.oze.presentation.userdetails.UserDetailsModule
 import dagger.Binds
@@ -20,7 +21,8 @@ import dagger.multibindings.IntoMap
         CreateNewAccountModule::class,
         LoginModule::class,
         PresentationModule::class,
-        UserDetailsModule::class
+        UserDetailsModule::class,
+        FavoritesModule::class,
 
     ]
 )

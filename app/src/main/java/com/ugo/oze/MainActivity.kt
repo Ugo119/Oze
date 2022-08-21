@@ -3,9 +3,11 @@ package com.ugo.oze
 import android.Manifest
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
@@ -45,6 +47,9 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(), MainTra
         // Init Navigation drawer
         initializeNavigationDrawer()
 
+        // Init bottom navigation bar.
+        initializeBottomNavBar()
+
         // Initialize Observers
         initObservers()
 
@@ -79,6 +84,56 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(), MainTra
     //region Navigation Controller
 
     private lateinit var navigationController: NavController
+
+    //endregion
+
+    //region Bottom Navigation Bar
+
+    var lastDestinationId = -1
+
+    private val bottomNavFragments = listOf(
+        R.id.placesFragment,
+        R.id.favoritesFragment,
+    )
+
+    private fun initializeBottomNavBar() {
+        // Initialize bottom navigation.
+        binding.bottomNavigationView
+            .setupWithNavController(navigationController)
+
+        navigationController.addOnDestinationChangedListener { _, destination, _ ->
+
+            // Save last destination.
+            lastDestinationId = destination.id
+
+            // Should show bottom navigation
+            val shouldShowBottomNav =
+                bottomNavFragments.contains(destination.id)
+
+            // Switch bottom navigation visibility.
+            if (shouldShowBottomNav) {
+                showBottomNavAndUnlockNavDrawer()
+            } else {
+                hideBottomNavAndLockNavDrawer()
+            }
+        }
+    }
+
+    private fun showBottomNavAndUnlockNavDrawer() {
+        // Show Bottom Bar
+        binding.bottomNavigationView.visibility = View.VISIBLE
+
+        // Unlock Navigation Drawer
+        binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
+    }
+
+    private fun hideBottomNavAndLockNavDrawer() {
+        // Hide Bottom Bar
+        binding.bottomNavigationView.visibility = View.GONE
+
+        // Lock Navigation Drawer
+        binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+    }
 
     //endregion
 

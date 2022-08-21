@@ -52,4 +52,8 @@ abstract class BaseFragment<Binding : ViewDataBinding, VM : LimboViewModel> :
         null
 
     //endregion
+
+    override fun setRetainInstance(retain: Boolean) {
+        super.setRetainInstance(false)
+    }
 }

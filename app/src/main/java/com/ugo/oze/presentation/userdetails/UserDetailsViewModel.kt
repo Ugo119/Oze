@@ -33,12 +33,4 @@ class UserDetailsViewModel @Inject constructor(
 
     }
 
-    // region Favorite Tag
-
-    private val _favoriteUser: MutableLiveData<User> = MutableLiveData()
-
-    val favoriteUser: LiveData<User> = _favoriteUser
-
-    // endregion
-
 }
