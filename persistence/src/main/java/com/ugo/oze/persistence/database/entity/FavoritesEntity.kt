@@ -6,8 +6,8 @@ import androidx.room.PrimaryKey
 import com.ugo.oze.utility.vocabulary.NONE
 import com.ugo.oze.utility.vocabulary.ZERO
 
-@Entity(tableName = "user")
-data class UserEntity(
+@Entity(tableName = "favorites")
+data class FavoritesEntity(
     @ColumnInfo(name = "login")
     var login: String = String.NONE,
     @ColumnInfo(name = "id")
@@ -47,7 +47,5 @@ data class UserEntity(
     var site_admin: Boolean = false,
     @ColumnInfo(name = "score")
     var score: Long = Long.ZERO,
-    @ColumnInfo(name = "is_favorite")
-    var is_favorite: Boolean? = null,
 
 )

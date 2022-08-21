@@ -39,8 +39,8 @@ abstract class UserDao : BaseDao<UserEntity>(){
 //    @Query(value = " SELECT downloaded FROM user WHERE id = :pastPaperId")
 //    abstract fun checkPastPaperDownloaded(pastPaperId: Long): Single<Boolean>
 //
-//    @Query(value = "UPDATE user SET downloaded = :downloaded WHERE id = :pastPaperId")
-//    abstract fun setPastPaperDownloaded(pastPaperId: Long, downloaded: Boolean): Completable
+    @Query(value = "UPDATE user SET is_favorite = :is_favorite WHERE id = :userId")
+    abstract fun setUserAsFavorite(userId: Long, is_favorite: Boolean): Completable
 //
 //    @Query(value = "UPDATE user SET topics = '[]' WHERE downloaded = 0")
 //    abstract fun removeAllCachedPastPapers(): Completable

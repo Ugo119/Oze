@@ -5,6 +5,7 @@ import com.ugo.oze.domain.model.base.Meta
 import com.ugo.oze.domain.model.user.User
 import com.ugo.oze.network.manager.UserNetworkManager
 import com.ugo.oze.persistence.manager.UserPersistenceManager
+import io.reactivex.Completable
 import io.reactivex.Flowable
 import io.reactivex.Single
 import javax.inject.Inject
@@ -41,7 +42,7 @@ class UserDomainManager @Inject constructor(
 
     // endregion
 
-    //region Past Papers - Observe
+    //region Users - Observe
 
     fun observeUsers(type: String): Flowable<List<User>> =
         persistence
@@ -49,4 +50,12 @@ class UserDomainManager @Inject constructor(
             .map(mapper::mapEntityListToDomainList)
 
     //endregion
+
+    // region Set User As Favorite
+
+    fun setUserAsFavorite (userId: Long, is_favorite: Boolean): Completable =
+        persistence
+            .setUserAsFavorite(userId, is_favorite)
+
+    // endregion
 }
