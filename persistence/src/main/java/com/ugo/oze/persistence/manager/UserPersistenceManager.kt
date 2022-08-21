@@ -31,12 +31,6 @@ class UserPersistenceManager  @Inject constructor(
             .insertIgnoreConflict(users)
             .subscribeOnIo()
 
-//    fun insert(user: UserEntity): Completable =
-//        userDao
-//            .insert(user)
-//            .subscribeOnIo()
-//            .ignoreElement()
-
     fun observeUsersByType(type: String): Flowable<List<UserEntity>> =
         userDao
             .observeUsersByType(type)
@@ -46,9 +40,4 @@ class UserPersistenceManager  @Inject constructor(
         userDao
             .setUserAsFavorite(userId, is_favorite)
             .subscribeOnIo()
-//
-//    fun removeAllCachedUsers(): Completable =
-//        userDao
-//            .removeAllCachedPastPapers()
-//            .subscribeOnIo()
 }

@@ -26,7 +26,8 @@ interface PracticeDrawerTrait : FragmentNavigationTrait {
                     user.avatar_url,
                     user.login,
                     user.followers_url,
-                    user.gists_url
+                    user.gists_url,
+                    user.is_favorite
                 )
             )
     }

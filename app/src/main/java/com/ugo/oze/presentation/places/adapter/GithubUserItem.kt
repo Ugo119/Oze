@@ -36,7 +36,6 @@ class GithubUserItem(
 
     override fun bindView(binding: ItemGithubUserBinding, payloads: List<Any>) {
         binding.githubUser.text = this.model.login
-
         Glide.with(binding.avater)
             .load(this.model.avatar_url)
             .into(binding.avater)
