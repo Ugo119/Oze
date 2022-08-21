@@ -11,6 +11,8 @@ Retrofit is used for network calls
 
 RxJava is used for the asynchronous and event-based calls.
 
+Paging implemented with persistence layer using SSOT.
+
 For Dependency Injection - Dagger is used.
 Each of the gradle modules contains a general dagger module (for Persistence - PersistenceModule, 
 Network - NetworkModule etc.) Purpose of those modules is to aggregate other dagger modules within the gradle library.
