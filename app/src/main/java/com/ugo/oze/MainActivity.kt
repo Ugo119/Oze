@@ -13,6 +13,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.ugo.oze.databinding.ActivityMainBinding
 import com.ugo.oze.main.base.BaseActivity
+import com.ugo.oze.presentation.places.PlacesViewModel
 import dagger.android.HasAndroidInjector
 
 class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(), MainTrait, HasAndroidInjector{
@@ -20,6 +21,9 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(), MainTra
     //region View Model
 
      override val viewModel: MainViewModel
+            by viewModels { factory }
+
+    val placesViewModel: PlacesViewModel
             by viewModels { factory }
 
     //endregion
@@ -136,5 +140,11 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(), MainTra
     }
 
     //endregion
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        placesViewModel.deleteAllUsers()
+
+    }
 
 }

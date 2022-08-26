@@ -61,6 +61,15 @@
 
     <!-- endregion -->
 
+    <ProgressBar
+        android:id="@+id/progressView"
+        android:layout_width="@dimen/size_p32"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        app:visible="@{viewModel.loading}"
+        />
+
   </FrameLayout>
 
   <!-- endregion -->

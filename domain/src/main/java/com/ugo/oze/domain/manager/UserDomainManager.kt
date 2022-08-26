@@ -58,4 +58,14 @@ class UserDomainManager @Inject constructor(
             .setUserAsFavorite(userId, is_favorite)
 
     // endregion
+
+    // region Delete All Users From DB
+
+    fun deleteAllUsers(): Completable =
+        persistence
+            .removeAllUsers()
+
+
+    // endregion
+
 }

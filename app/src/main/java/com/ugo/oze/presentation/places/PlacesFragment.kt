@@ -46,7 +46,7 @@ class PlacesFragment : BaseFragment<FragmentPlacesBinding, PlacesViewModel>(), P
     setupToolbar()
 
     viewModel.fetchGithubUsers()
-    viewModel.observeUsers()
+//    viewModel.observeUsers()
   }
 
   //region Binding

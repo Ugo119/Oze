@@ -21,7 +21,7 @@ abstract class UserDao : BaseDao<UserEntity>(){
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     abstract fun insertIgnoreConflict(entity: UserEntity): Single<Long>
 
-    @Query(value = " SELECT * FROM user WHERE type = :type")
+    @Query(value = "SELECT * FROM user WHERE type = :type")
     abstract fun observeUsersByType(type: String): Flowable<List<UserEntity>>
 
     @Query(value = "UPDATE user SET is_favorite = :is_favorite WHERE id = :userId")

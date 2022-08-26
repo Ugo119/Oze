@@ -37,6 +37,8 @@ class PlacesViewModel @Inject constructor(
         // Calculate next page.
         val next: Long = currentPage
 
+        Log.e("TAG_Profiles", "Next = $next")
+
         // Download next page of data.
         fetchGithubUsers(page = next)
     }
@@ -57,9 +59,9 @@ class PlacesViewModel @Inject constructor(
     }
 
     private fun handleDownloadUsersSuccess(meta: Meta<User>) {
+        observeUsers()
         // Save meta for later use.
         this.meta = meta
-
     }
 
     private fun handleDownloadUsersError(throwable: Throwable) {
@@ -87,13 +89,14 @@ class PlacesViewModel @Inject constructor(
     }
 
     private fun handleObserveUsersSuccess(list: List<User>) {
+        Log.e("TAG_Download_Meta", "UPDATED: $list")
         _users.postValue(list.map { GithubUserItem(it) })
     }
 
     private fun handleObserveUsersError(throwable: Throwable) {
         // Show error message
         Log.e("TAG_Download_Meta", "$throwable")
-        Log.e("TAG_Download_Meta","An error occurred while fetching past papers from db.")
+        Log.e("TAG_Download_Meta","An error occurred while fetching users from db.")
     }
 
     //endregion
@@ -109,6 +112,27 @@ class PlacesViewModel @Inject constructor(
 
     // endregion
 
+    // region Delete All Users
+
+    fun deleteAllUsers() {
+        userDomainManager
+            .deleteAllUsers()
+            .subscribe(
+                ::onDeleteAllUsersSuccess,
+                ::onDeleteAllUsersError
+            ).addTo(disposables)
+    }
+
+    fun onDeleteAllUsersSuccess() {
+        Log.e("TAG_Users", "All users deleted successfully!")
+    }
+
+    fun onDeleteAllUsersError(throwable: Throwable) {
+        Log.e("TAG_Users","An error occurred while deleting users from db!!")
+    }
+
+    // endregion
+
     companion object {
         const val FIRST_PAGE = 1L
         const val LOCATION = "lagos"
@@ -119,7 +143,6 @@ class PlacesViewModel @Inject constructor(
     //region Loading
 
     private val _loading: MutableLiveData<Boolean> = MutableLiveData()
-
     val loading: LiveData<Boolean> = _loading
 
     private fun updateProgress(inProgress: Boolean) {
